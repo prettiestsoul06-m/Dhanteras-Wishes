@@ -1,0 +1,219 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:radial-gradient(circle,#700b13,#250000);
+color:#fff;
+font-family:Georgia,serif;
+text-align:center;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+.welcome{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:25px;
+animation:fade 2s ease;
+}
+
+.diya{
+font-size:80px;
+animation:glow 1.5s infinite alternate;
+}
+
+.small{
+letter-spacing:5px;
+color:#ffd76a;
+margin:25px 0;
+font-size:13px;
+}
+
+h1{
+font-size:clamp(40px,8vw,75px);
+color:#ffd76a;
+text-shadow:0 0 20px orange;
+animation:shine 3s infinite;
+}
+
+h2{
+color:#ffe3a0;
+margin:20px;
+}
+
+.intro{
+margin:20px;
+font-size:18px;
+line-height:1.7;
+}
+
+.gift{
+font-size:100px;
+cursor:pointer;
+margin:25px;
+animation:bounce 2s infinite;
+}
+
+button{
+padding:14px 28px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ffb700,#ffe9a3);
+color:#520000;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin:12px;
+transition:0.4s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px gold;
+}
+
+.greeting{
+display:none;
+min-height:100vh;
+padding:50px 20px;
+animation:reveal 1.5s ease;
+}
+
+.greeting h1{
+margin:25px 0;
+}
+
+.flowers{
+font-size:30px;
+margin:20px;
+}
+
+.diyas{
+font-size:55px;
+margin:30px;
+animation:glow 1.5s infinite alternate;
+}
+
+.message{
+max-width:650px;
+margin:30px auto;
+font-size:20px;
+line-height:2;
+color:#fff0c2;
+}
+
+.gold{
+color:#ffd76a;
+font-size:30px;
+}
+
+.personal{
+margin:30px;
+}
+
+input{
+display:block;
+margin:15px auto;
+padding:14px;
+width:90%;
+max-width:350px;
+border-radius:30px;
+border:2px solid gold;
+text-align:center;
+font-size:16px;
+outline:none;
+}
+
+#personalWish{
+font-size:23px;
+color:#ffd76a;
+margin:25px;
+}
+
+footer{
+margin:50px 0 20px;
+color:#ffda85;
+}
+
+#fireworks{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:10;
+}
+
+.particle{
+position:fixed;
+top:-20px;
+color:#ffd76a;
+font-size:20px;
+animation:fall linear infinite;
+pointer-events:none;
+}
+
+@keyframes glow{
+from{
+filter:drop-shadow(0 0 5px orange);
+}
+to{
+filter:drop-shadow(0 0 25px gold);
+}
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-20px);
+}
+}
+
+@keyframes shine{
+0%,100%{
+text-shadow:0 0 10px gold;
+}
+50%{
+text-shadow:0 0 30px orange;
+}
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes reveal{
+from{
+opacity:0;
+transform:scale(0.7);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+@media(max-width:600px){
+.message{
+font-size:17px;
+}
+.welcome{
+padding:15px;
+}
+}
